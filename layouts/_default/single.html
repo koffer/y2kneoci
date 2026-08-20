@@ -1,0 +1,30 @@
+{{ define "main" }}
+    <article class="primary-content-area">
+        
+        <h1 class="page-title">{{ .Title }}</h1>
+        
+        <div class="post-meta">
+            Enviado el {{ .Date.Format "02 Jan 2006" }}
+        </div>
+        
+        <!-- Injected Markdown content -->
+        <div class="post-content">
+            {{ .Content }}
+        </div>
+        
+        <!-- Post tags -->
+        {{ if .Params.tags }}
+        <div class="post-tags">
+            <h4>Etiquetas</h4>
+            <ul>
+                {{ range .Params.tags }}
+                <li>
+                    <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+        {{ end }}
+        
+    </article>
+{{ end }}

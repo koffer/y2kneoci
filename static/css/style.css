@@ -1,0 +1,485 @@
+/**
+ * Global Styles for y2kneoci theme
+ * Aesthetic: Y2K / NeoCities / Retro Pink
+ */
+
+:root {
+  /* Color Palette */
+  --pink-bright: #f9a1c9;
+  --pink-light: #ffcce6;
+  --pink-dark: #e8649f;
+  --pink-soft: #ffcce6;
+  --pink-border: #cc3377;
+  --maroon-dark: #800020;
+  --maroon-text: #5e0018;
+  --white: #ffffff;
+  --glossy-red-top: #ff4d6d;
+  --glossy-red-bot: #e6002e;
+}
+
+/* --- Base Body & Background --- */
+body {
+  background-color: var(--pink-light);
+  /* Checkered background pattern for the whole page */
+  /* background-image: 
+    linear-gradient(45deg, #ffb3d9 25%, transparent 25%), 
+    linear-gradient(-45deg, #ffb3d9 25%, transparent 25%), 
+    linear-gradient(45deg, transparent 75%, #ffb3d9 75%), 
+    linear-gradient(-45deg, transparent 75%, #ffb3d9 75%); */
+
+/* */
+
+
+opacity:1;
+
+
+background-size: 10px 10px;
+    
+background-size: 40px 40px;
+
+margin: 0;
+padding: 0;
+
+
+  font-family: Gill Sans, Verdana, sans-serif;
+	font-size: 11px;
+	line-height: 14px;
+	
+	letter-spacing: 2px;
+	
+}
+
+
+/* --- Typography & Headings (REM Version) --- */
+
+/* Base Text - 13px is approx 0.8125rem */
+body, p, div {
+  font-family: "MS Sans Serif", Geneva, sans-serif;
+  /* font-size: 0.8125rem;  */
+  font-size: 1rem; 
+  line-height: 1.5;
+  color: #333333;
+}
+
+/* Main Page Title (H1) - 24px is 1.5rem */
+h1.page-title, h1 {
+  /* font-family: "MS Sans Serif", Geneva, sans-serif; */
+  font-size: 1.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+	letter-spacing: 2px;
+
+  color: var(--maroon-text);
+  margin-bottom: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.0625rem;
+  /* Solid retro shadow - kept in px for sharpness if preferred, or 0.125rem */
+  text-shadow: 0.125rem 0.125rem 0px var(--pink-light);
+}
+
+/* Block Titles or Section Titles (H2) - 18px is 1.125rem */
+h2 {
+  font-size: 1.125rem;
+  font-size: 1.4rem;
+  color: var(--maroon-dark);
+  border-bottom: 0.125rem solid var(--pink-soft);
+  padding-bottom: 0.3125rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.front-page h2 {
+  font-size: 1.5rem;
+  color: var(--maroon-dark);
+  border-bottom: 0.125rem solid var(--pink-soft);
+  padding-bottom: 0.3125rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+/* Subsection Titles (H3) - 16px is 1rem */
+h3 {
+  font-size: 1rem;
+  color: var(--pink-bright);
+  font-style: italic;
+  margin-top: 1.25rem;
+  margin-bottom: 0.625rem;
+}
+
+/* Small Headings (H4) - 14px is 0.875rem */
+h4, h5, h6 {
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: var(--maroon-text);
+  margin-top: 1rem;
+  margin-bottom: 0.3125rem;
+}
+
+/* Links inside content */
+.primary-content-area a {
+  color: var(--pink-dark);
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* Main site wrapper centering the portal */
+.site-wrapper {
+  max-width: 1000px;
+  margin: 20px auto;
+  background: var(--white);
+  border: 4px double var(--pink-border);
+  box-shadow: 5px 5px 0px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+/* Flex container for Sidebar and Content */
+.main-container {
+  display: flex;
+  padding: 0; /* Removed padding to allow sidebar to touch edges */
+  align-items: stretch; /* Ensures sidebar height matches content height */
+}
+
+/* --- Main Navigation (Top Menu) --- */
+.navigation-bar ul:first-of-type {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 2px;
+  background-color: var(--maroon-dark);
+  border-bottom: 2px solid var(--maroon-dark);
+}
+
+.navigation-bar li {
+  flex-grow: 1;
+}
+
+.navigation-bar li a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--maroon-text);
+  padding: 8px 15px;
+  font-size: 0.95rem;
+  /* Glossy Pink Gradient */
+  /* background: linear-gradient(to bottom, 
+    #ffb3d9 0%, #ffb3d9 50%, 
+    var(--pink-bright) 50%, var(--pink-bright) 100%
+  ); */
+
+   background: linear-gradient(to bottom, 
+    var(--pink-light) 0%, var(--pink-light) 50%, 
+    var(--pink-bright) 50%, var(--pink-bright) 100%
+  );
+  /* 3D Bevel effect */
+  border-top: 2px solid #ffd9ec;
+  border-left: 2px solid #ffd9ec;
+  border-right: 2px solid var(--pink-dark);
+  border-bottom: 2px solid var(--pink-dark);
+}
+
+.navigation-bar li a:hover {
+  background: linear-gradient(to bottom, #ffe6f2 0%, #ffe6f2 50%, #ff80bf 50%, #f781bc 100%);
+}
+
+/* --- Responsive Navigation for .navigation-bar ul:first-of-type --- */
+
+@media screen and (max-width: 768px) {
+  .navigation-bar ul:first-of-type {
+    /* Stack items vertically on mobile */
+    flex-direction: column;
+    /* Reset gap to 0 so buttons touch each other perfectly in a stack */
+    gap: 0; 
+    border-bottom: none;
+  }
+
+  .navigation-bar ul:first-of-type li {
+    /* Ensure each list item takes the full width of the screen */
+    width: 100%;
+    flex-grow: 1;
+  }
+
+  .navigation-bar ul:first-of-type li a {
+    /* Maintain the 3D look but adjust borders for the vertical stack */
+    border-right: 2px solid var(--pink-dark);
+    border-bottom: 2px solid var(--pink-dark);
+    /* Increase padding for better touch targets on phones */
+    padding: 12px 15px;
+  }
+  
+  /* Optional: Adjust the main layout so the sidebar and content stack too */
+  .main-container {
+    flex-direction: column;
+  }
+  
+  /* .sidebar-left {
+    width: 100%;
+    border-right: none;
+    border-bottom: 2px solid var(--maroon-dark);
+  } */
+}
+
+.navigation-bar .contextual {
+  display: none;
+}
+
+
+/* --- Sidebar Styling (Continuous Background) --- */
+.sidebar-left {
+ min-width:  250px;
+ width: 25%;
+  flex-shrink: 0;
+  background-color: var(--pink-light);
+  border-right: 2px solid var(--maroon-dark);
+  /* Continuous horizontal pink stripes for the entire column */
+
+  /* background: repeating-linear-gradient(
+    0deg,
+    #ffcce6, #ffcce6 15px,
+    #ffb3d9 15px, #ffb3d9 30px
+  ); */
+  background-color:var(--pink-dark);
+  padding:2rem 1rem;
+}
+
+/* Individual blocks within the sidebar */
+.sidebar-left .block {
+  margin-bottom: 0;
+  background: transparent;
+  border-bottom: 2px solid var(--maroon-dark); /* Dark line for every block */
+}
+
+/* Glossy Sidebar Header */
+.sidebar-left .block h2 {
+  margin: 0;
+  padding: 6px 10px;
+  color: var(--white);
+  font-size: 14px;
+  text-shadow: 1px 1px var(--maroon-dark);
+  /* Red Glossy Gradient */
+  background: linear-gradient(to bottom, 
+    var(--glossy-red-top) 0%, var(--glossy-red-top) 50%, 
+    var(--glossy-red-bot) 50%, var(--glossy-red-bot) 100%
+  );
+  border-bottom: 2px solid var(--maroon-dark);
+  border-top: 1px solid #ff8095;
+}
+
+/* Sidebar Menu Items */
+.sidebar-left .block ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-left .block ul li {
+  border-bottom: 1px solid rgba(128, 0, 32, 0.2);
+}
+
+.sidebar-left .block ul li a {
+  display: block;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: var(--maroon-text);
+  font-weight: bold;
+  font-size: 13px;
+  transition: all 0.2s ease;
+}
+
+.sidebar-left .block ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  padding-left: 18px;
+}
+
+/* --- Main Content Area --- */
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.header-region {
+ 
+  padding: 10px;
+  background-color: #fff0f5;
+ 
+  text-align: center;
+  background-image:url("../img/image_up.jpg");
+  min-height: 10px;
+}
+
+.featured-area {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #fff0f5;
+  border: 2px dashed var(--pink-border);
+  text-align: center;
+  background-image:url("../img/cat-feature.jpg");
+  min-height: 200px;
+}
+
+.primary-content-area, .welcome-box {
+  background: var(--white);
+  border: 2px solid var(--pink-bright);
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 2px 2px 0px var(--pink-dark);
+}
+
+/* Section Divider styling (e.g., What's Happening title) */
+.section-divider {
+  margin: 20px 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--pink-dark);
+  border-bottom: 2px solid var(--pink-soft);
+}
+
+/* --- Three Column Grid for the bottom area --- */
+.three-column-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* General block styling for main area content */
+.main-content .block h2 {
+  background: var(--pink-bright);
+  color: white;
+  padding: 5px 10px;
+  margin: -15px -15px 15px -15px; 
+  border-bottom: 2px solid var(--pink-dark);
+  font-size: 1rem;
+}
+
+/* --- Footer --- */
+.main-footer {
+  padding: 20px;
+  background: var(--pink-light);
+  border-top: 4px double var(--pink-border);
+  text-align: center;
+}
+
+/* --- Drupal Primary Tabs (Clean Style) --- */
+
+/* 1. Container for the tabs */
+.primary-content-area .tabs {
+  margin: 0 0 0 10px; 
+  padding: 0;
+}
+
+/* 2. The UL list */
+.primary-content-area .tabs ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+/* 3. Individual Tab Items (LI) */
+.primary-content-area .tabs ul li {
+  margin-right: 4px;
+  padding: 0;
+}
+
+/* 4. Tab Links (A) - No gray background */
+.primary-content-area .tabs ul li a {
+  display: block;
+  padding: 6px 20px;
+  text-decoration: none;
+  font-family: "MS Sans Serif", Geneva, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--maroon-text);
+  
+  /* Retro Tab Shape */
+  border-radius: 8px 8px 0 0;
+  
+  /* Background is now white to match the content box */
+  background: #ffffff;
+  
+  /* Border settings */
+  border: 2px solid var(--pink-dark);
+  border-bottom: none; 
+  
+  position: relative;
+  z-index: 1;
+  transition: all 0.1s ease;
+}
+
+/* 5. Hover state */
+.primary-content-area .tabs ul li a:hover {
+  background: var(--pink-light); /* Light pink tint on hover */
+  color: var(--pink-bright);
+  top: -2px; 
+}
+
+/* 6. The Active Tab - Still highlighted in bright pink */
+.primary-content-area .tabs ul li.is-active a {
+  background: var(--pink-bright); 
+  color: #ffffff;
+  border-color: var(--pink-dark);
+  border-bottom: 2px solid var(--pink-bright); /* Blends with the background */
+  padding-top: 8px;
+  top: 2px; /* Overlaps the content box border */
+  z-index: 2; 
+}
+
+/* 7. Top border of the content area for tab integration */
+.primary-content-area {
+  position: relative;
+  border-top: 2px solid var(--pink-dark);
+  padding-top: 20px;
+  background: #ffffff;
+}
+
+/* --- Post Specific Styles --- */
+
+.post-meta {
+  font-size: 0.85rem;
+  color: #666666;
+  margin-bottom: 1.5rem;
+}
+
+.post-content {
+  /* You can add specific spacing for paragraphs or images inside the post here later */
+  line-height: 1.6;
+}
+
+.post-tags {
+  margin-top: 30px;
+  border-top: 1px solid var(--pink-soft);
+  padding-top: 10px;
+}
+
+.post-tags h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.post-tags ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.post-tags li {
+  display: inline;
+  margin-right: 10px;
+}
+
+.post-tags a {
+  color: var(--pink-dark);
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.post-tags a:hover {
+  color: var(--pink-bright);
+}

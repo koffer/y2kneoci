@@ -1,0 +1,34 @@
+# themes/y2kneoci/hugo.toml
+
+name = "y2kneoci"
+description = "Un sitio rosa para una nueva era del internet con estética Y2K / NeoCities."
+license = "MIT"
+homepage = "https://your-site.com"
+tags = ["y2k", "retro", "pink", "neocities", "blog"]
+features = ["responsive", "sidebar", "custom-backgrounds"]
+min_version = "0.120.0"
+
+[author]
+  name = "koffer"
+  homepage = "https://tu-sitio.com"
+
+[menus]
+  [[menus.main]]
+    name = 'Home'
+    pageRef = '/'
+    weight = 10
+
+  [[menus.main]]
+    name = 'Posts'
+    pageRef = '/posts'
+    weight = 20
+
+  [[menus.main]]
+    name = 'Tags'
+    pageRef = '/tags'
+    weight = 30
+
+[module]
+  [module.hugoVersion]
+    extended = false
+    min = '0.146.0'

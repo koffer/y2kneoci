@@ -1,0 +1,15 @@
+name = "y2kneoci Theme for Hugo"
+license = "MIT"
+licenselink = "https://github.com/gohugo-ananke/ananke/blob/master/LICENSE.md"
+description = "A theme Hugo sites"
+homepage = "https://github.com/gohugo-ananke/ananke"
+demosite = "https://ananke-theme.netlify.app/"
+tags = ["y2k", "retro", "pink", "neocities", "blog"]
+features = ["responsive", "sidebar", "custom-backgrounds"]
+min_version = "0.160.0"
+
+authors = [
+  {name = "Patrick Kollitsch", homepage = "https://github.com/davidsneighbour"},
+  {name = "Regis Philibert", homepage = "https://github.com/regisphilibert"},
+  {name = "Bud Parr", homepage = "https://github.com/budparr"}
+]

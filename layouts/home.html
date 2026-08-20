@@ -1,0 +1,34 @@
+{{ define "main" }}
+    <!-- Región del Banner (Logo) -->
+    <div class="header-region">
+        <h1 class="page-title" style="visibility: hidden;">y2kneoci</h1>
+    </div>
+
+    <!-- Bucle para recorrer y mostrar los artículos (posts) -->
+    {{ range .Site.RegularPages }}
+    <article class="primary-content-area front-page">
+        <h2>
+            <a href="{{ .Permalink }}" style="color: inherit; text-decoration: none;">
+                {{ .Title }}
+            </a>
+        </h2>
+        
+        <div class="meta" style="font-size: 0.85rem; color: #666; margin-bottom: 1rem;">
+            Enviado el {{ .Date.Format "02 Jan 2006" }}
+        </div>
+        
+        <div class="content">
+            {{ .Summary }}
+        </div>
+        
+        <div style="margin-top: 1rem;">
+            <a href="{{ .Permalink }}" style="font-weight: bold; color: var(--pink-dark);">• Lee más</a>
+        </div>
+    </article>
+    {{ else }}
+        <!-- Mensaje de respaldo si no encuentra posts -->
+        <article class="primary-content-area front-page">
+            <p>No hay artículos publicados todavía.</p>
+        </article>
+    {{ end }}
+{{ end }}

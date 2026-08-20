@@ -1,0 +1,26 @@
+<!-- _partials/sidebar.html -->
+<aside class="sidebar-left">
+    <!-- Bloque 1: Menú de prueba -->
+    <div class="block">
+        <h2>Menú de prueba</h2>
+        <ul>
+            <li><a href="#">Prueba de enlace</a></li>
+            <li><a href="{{ "index.xml" | relURL }}">Suscribirse a RSS feed</a></li>
+            <li><a href="#">Iniciar sesión</a></li>
+        </ul>
+        <div style="padding: 10px;">
+            <input type="text" style="width: 100px;">
+            <button>Buscar</button>
+        </div>
+    </div>
+
+    <!-- Bloque 2: Categorías -->
+    <div class="block">
+        <h2>Secciones</h2>
+        <ul>
+            {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+            <li><a href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}">{{ $name }}</a></li>
+            {{ end }}
+        </ul>
+    </div>
+</aside>

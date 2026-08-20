@@ -1,0 +1,66 @@
+/**
+ * Background Styles for y2kneoci theme
+ * Aesthetic: Y2K / NeoCities / Retro Pink
+ */
+
+/* Checkered Pink (Default) */
+body.bg-variant--line-pink {
+  background-color: var(--pink-light);
+    /* Checkered background pattern for the whole page */
+  background-image: linear-gradient(-45deg, var(--pink-light), var(--pink-dark) 50%, var(--pink-light) 50%, var(--pink-dark));
+  
+}
+
+/* checkered-pink */
+body.bg-variant--checkered-pink {
+  background-color: #f4f4f4;
+  background-image: none;
+
+background-color: var(--pink-light);
+  background-image: 
+    linear-gradient(45deg, #ffb3d9 25%, transparent 25%), 
+    linear-gradient(-45deg, #ffb3d9 25%, transparent 25%), 
+    linear-gradient(45deg, transparent 75%, #ffb3d9 75%), 
+    linear-gradient(-45deg, transparent 75%, #ffb3d9 75%);
+  background-size: 40px 40px;
+
+}
+
+/* Modern Dots */
+body.bg-variant--dots-modern {
+ 
+  /* background-image: radial-gradient(#ffb3d9 1px, transparent 1px);
+  background-size: 20px 20px; */
+
+
+  background-color: var(--pink-light);
+
+  /* Creamos dos capas de círculos */
+  background-image: 
+    radial-gradient(#ff69b4 20%, transparent 20%),
+    radial-gradient(#ff69b4 20%, transparent 20%);
+
+  /* Ajustamos el tamaño del patrón */
+  background-size: 50px 50px;
+
+  /* Desplazamos la segunda capa para crear el patrón intercalado */
+  background-position: 0 0, 25px 25px;
+
+}
+
+/* Solid Neutral */
+body.bg-variant--solid-neutral {
+  background-color: var(--pink-border);
+  background-image: none;
+
+
+  background-size: 40px 40px;
+
+}
+
+
+
+/* None */
+body.bg-variant--none {
+  background: var(--pink-light);
+}

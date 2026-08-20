@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+    <!-- Hugo buscará automáticamente en layouts/_partials/head.html -->
+    {{ partial "head.html" . }}
+</head>
+<body class="bg-variant--line-pink"> 
+    <div class="site-wrapper">
+        
+        <!-- Barra de navegación principal -->
+        {{ partial "nav.html" . }}
+
+        <div class="main-container">
+            <!-- Barra lateral izquierda -->
+            {{ partial "sidebar.html" . }}
+
+            <!-- Área de contenido principal -->
+            <main class="main-content">
+    {{ block "main" . }}{{ end }}
+</main>
+        </div>
+        
+        <!-- Pie de página -->
+        {{ partial "footer.html" . }}
+    </div>
+</body>
+</html>
