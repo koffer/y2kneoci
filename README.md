@@ -1,3 +1,4 @@
+<img width="1247" height="880" alt="y2kneoci" src="https://github.com/user-attachments/assets/8ba62d76-c908-4215-b63b-3f7b6bc60a0e" />
 # y2kneoci Hugo Theme
 
 
